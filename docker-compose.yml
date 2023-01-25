@@ -8,10 +8,10 @@ services:
     volumes:
       - 'mysql_data:/bitnami/mysql/data'
     environment:
-      - MYSQL_DATABASE: php_db
-      - MYSQL_USER: php_user
-      - MYSQL_PASSWORD: php_password
-      - MYSQL_ROOT_PASSWORD: mysql_root_password
+      MYSQL_DATABASE: php_db
+      MYSQL_USER: php_user
+      MYSQL_PASSWORD: php_password
+      MYSQL_ROOT_PASSWORD: mysql_root_password
     healthcheck:
       test: [ 'CMD', '/opt/bitnami/scripts/mysql/healthcheck.sh' ]
       interval: 15s
